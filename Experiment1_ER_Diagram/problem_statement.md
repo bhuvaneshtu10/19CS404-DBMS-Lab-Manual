@@ -44,9 +44,20 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 |              |            |               |       |
 
 ### Assumptions
-- 
-- 
-- 
+- **Implicit Primary Keys**  
+  Several entities (Member, Trainer, Payment) lack explicit primary keys. It is assumed unique IDs (e.g., MemberID) will be created in the physical schema.
+
+- **Missing Attributes**  
+  "Membership Type" is required but not shown in the Member entity. This is important for billing logic.
+
+- **Type of Session Relationship**  
+  The M:N relationship between Trainer and Session suggests multiple trainers can conduct a single session.
+
+- **Payment Structure**  
+  The separation of Membership Payment and Session Payment implies a hybrid pricing model (subscription + pay-per-session).
+
+- **Attendance Tracking**  
+  The 1:1 Session–Attendance relationship suggests attendance is tracked per session as a whole, not per individual member.
 
 ---
 
