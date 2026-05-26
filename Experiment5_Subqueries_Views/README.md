@@ -38,123 +38,161 @@ DROP VIEW view_name;
 
 **Question 1**
 --
--- Paste Question 1 here
+
+<img width="487" height="256" alt="5 1" src="https://github.com/user-attachments/assets/573fbfeb-95ff-43b2-818c-9af2746e697a" />
 
 ```sql
--- Paste your SQL code below for Question 1
+select medication_id, medication_name, dosage from Medications where dosage=(select max(dosage) from Medications);
 ```
 
 **Output:**
 
-![Output1](output.png)
+
+<img width="442" height="195" alt="5 1a" src="https://github.com/user-attachments/assets/c7b3823f-6ad7-4b59-b3aa-06e86f0a6bc9" />
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+
+<img width="714" height="206" alt="5 2" src="https://github.com/user-attachments/assets/57793654-6af2-4036-bc52-98700ff7595e" />
 
 ```sql
--- Paste your SQL code below for Question 2
+select * from Orders where salesman_id in (select salesman_id from Salesman where city ='New York');
 ```
 
 **Output:**
 
-![Output2](output.png)
+
+
+<img width="617" height="199" alt="5 2a" src="https://github.com/user-attachments/assets/dd777215-868e-4a16-8281-1e700e432971" />
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+
+
+<img width="636" height="185" alt="5 3" src="https://github.com/user-attachments/assets/83636a94-8a1d-4c7d-a778-113a12502622" />
+
 
 ```sql
--- Paste your SQL code below for Question 3
+select * from GRADES g where grade=(select min(grade) from GRADES where subject=g.subject);
 ```
 
 **Output:**
 
-![Output3](output.png)
+
+
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+
+<img width="591" height="359" alt="5 4" src="https://github.com/user-attachments/assets/634da0cf-dab1-4f9a-8f21-3de0fcf3d89a" />
+
 
 ```sql
--- Paste your SQL code below for Question 4
+select salesman_id, name from salesman where salesman_id in (select salesman_id from customer group by salesman_id having count(*)>1);
 ```
 
 **Output:**
 
-![Output4](output.png)
+
+<img width="284" height="204" alt="5 4a" src="https://github.com/user-attachments/assets/384b9565-473d-4005-94ae-28bba5d47ba2" />
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+
+<img width="478" height="329" alt="5 5" src="https://github.com/user-attachments/assets/4ae963fa-1cca-40db-be51-d6805b0dfe92" />
+
 
 ```sql
--- Paste your SQL code below for Question 5
+select * from CUSTOMERS where SALARY<2500;
 ```
 
 **Output:**
 
-![Output5](output.png)
+
+<img width="600" height="208" alt="5 5a" src="https://github.com/user-attachments/assets/7351ec39-ef91-462c-a6b1-aed6b7e01165" />
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+
+
+<img width="559" height="314" alt="5 6" src="https://github.com/user-attachments/assets/8fadc61f-d1e6-48af-95a8-19aa63eb9cf4" />
+
 
 ```sql
--- Paste your SQL code below for Question 6
+select * from Employee where age<(select avg(age) from Employee where income>1000000);
 ```
 
 **Output:**
 
-![Output6](output.png)
+
+<img width="686" height="174" alt="5 6a" src="https://github.com/user-attachments/assets/fc157bba-da03-4c8a-b666-8a4929544598" />
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+
+
+<img width="696" height="319" alt="5 7" src="https://github.com/user-attachments/assets/ba300711-1dba-44a9-a961-b7dac07ccdac" />
+
 
 ```sql
--- Paste your SQL code below for Question 7
+select student_name, grade from GRADES g where grade=(select min(grade) from GRADES where subject=g.subject);
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="367" height="188" alt="5 7a" src="https://github.com/user-attachments/assets/8c5b20cf-8b0a-40ed-a81e-33db8aeafd09" />
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+
+<img width="451" height="255" alt="5 8" src="https://github.com/user-attachments/assets/e4964be9-577f-49ae-8027-3b92dd092bf4" />
+
 
 ```sql
--- Paste your SQL code below for Question 8
+select medication_id, medication_name, dosage from Medications where dosage=(select min(dosage) from Medications);
 ```
 
 **Output:**
 
-![Output8](output.png)
+
+<img width="428" height="167" alt="5 8a" src="https://github.com/user-attachments/assets/fb3156b5-57fb-4c59-ab47-29f1fdbe2dea" />
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+
+<img width="493" height="334" alt="5 9" src="https://github.com/user-attachments/assets/c03328b7-7797-4098-931b-5283d8367f25" />
+
 
 ```sql
--- Paste your SQL code below for Question 9
+select * from CUSTOMERS where SALARY>4500;
 ```
 
 **Output:**
 
-![Output9](output.png)
+<img width="598" height="189" alt="5 9a" src="https://github.com/user-attachments/assets/a4288be9-a7f3-48ae-945d-12fa5fc99b7c" />
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+<img width="534" height="271" alt="5 10" src="https://github.com/user-attachments/assets/da284cd6-fd2f-4ed6-9eb8-57f84b370b41" />
+
 
 ```sql
--- Paste your SQL code below for Question 10
+select name,city from customer where city in(select city from customer where id in(3,7));
 ```
 
 **Output:**
 
-![Output10](output.png)
+
+<img width="273" height="204" alt="5 10a" src="https://github.com/user-attachments/assets/d9946e4d-1764-427c-830d-bd92877b9ab3" />
 
 
 ## RESULT
